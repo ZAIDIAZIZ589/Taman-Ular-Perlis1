@@ -20,31 +20,30 @@ header{
     align-items:center;
     justify-content:space-between;
 
-    padding:0 60px;
+    padding:15px 60px;
 
     background:linear-gradient(
         90deg,
         rgba(120,140,220,0.95),
         rgba(210,215,235,0.95)
     );
+
+    flex-wrap:wrap;
 }
 
 .logo{
-    width:320px;
-
     font-size:20px;
     font-weight:700;
     color:black;
 }
 
 nav{
-    flex:1;
-
     display:flex;
     align-items:center;
     justify-content:center;
+    gap:45px;
 
-    gap:55px;
+    flex-wrap:wrap;
 }
 
 nav a{
@@ -61,7 +60,7 @@ nav a:hover{
 }
 
 .nav-logo{
-    width:110px;
+    width:100px;
     height:auto;
     object-fit:contain;
 }
@@ -70,18 +69,15 @@ nav a:hover{
 
 .contact-top{
     background:#8c8c8c;
-
     text-align:center;
-
-    padding:70px 25px;
-
+    padding:70px 20px;
     color:white;
 }
 
 .contact-top h2{
     font-size:42px;
     line-height:1.4;
-    font-weight:900;
+    font-weight:800;
 }
 
 .contact-top span{
@@ -95,7 +91,6 @@ nav a:hover{
     background:orange;
 
     margin:25px auto 35px;
-
     border-radius:10px;
 }
 
@@ -104,16 +99,12 @@ nav a:hover{
     max-width:850px;
 
     margin:auto;
-    margin-bottom:25px;
+    margin-bottom:50px;
 
     font-size:18px;
     line-height:2;
 
     color:white;
-}
-
-.second-desc{
-    margin-bottom:55px;
 }
 
 /* ================= WHATSAPP BOX ================= */
@@ -136,14 +127,12 @@ nav a:hover{
 .whatsapp-box h3{
     font-size:28px;
     color:#111;
-
     margin-bottom:20px;
 }
 
 .whatsapp-box p{
     font-size:17px;
     line-height:1.9;
-
     color:#333;
 
     margin-bottom:35px;
@@ -157,7 +146,7 @@ nav a:hover{
 
     text-decoration:none;
 
-    padding:15px 38px;
+    padding:16px 38px;
 
     border-radius:50px;
 
@@ -169,20 +158,18 @@ nav a:hover{
 
 .whatsapp-btn:hover{
     background:#1ebc59;
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 }
 
-/* ================= FAQ ================= */
+/* ================= FAQ SECTION ================= */
 
 .faq-section{
     background:#2e2e2e;
-
     padding:80px 40px;
 }
 
 .faq-section h2{
     text-align:center;
-
     color:white;
 
     font-size:42px;
@@ -191,21 +178,20 @@ nav a:hover{
 }
 
 .faq-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 
-    gap:28px;
+    max-width:1100px;
+    margin:auto;
 }
 
 .faq-box{
-    width:320px;
-
     background:white;
 
     border-radius:22px;
 
-    padding:28px;
+    padding:30px;
 
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
 
@@ -217,20 +203,17 @@ nav a:hover{
 }
 
 .faq-box h3{
-    font-size:22px;
+    font-size:24px;
+    line-height:1.5;
 
     margin-bottom:18px;
 
     color:#111;
-
-    line-height:1.5;
 }
 
 .faq-box p{
-    font-size:16px;
-
-    line-height:1.8;
-
+    font-size:17px;
+    line-height:1.9;
     color:#333;
 }
 
@@ -239,33 +222,29 @@ nav a:hover{
 footer{
     background:#2d5fd399;
 
-    color:#000000;
+    color:#000;
 
     text-align:center;
 
     padding:22px;
 
-    font-size:15px;
+    font-size:16px;
 }
 
 /* ================= TABLET ================= */
 
-@media(max-width:1200px){
+@media(max-width:1000px){
 
-    header{
-        padding:0 30px;
-    }
-
-    nav{
-        gap:30px;
+    .faq-container{
+        grid-template-columns:1fr;
     }
 
     .contact-top h2{
         font-size:36px;
     }
 
-    .faq-box{
-        width:45%;
+    .faq-section h2{
+        font-size:36px;
     }
 }
 
@@ -273,38 +252,26 @@ footer{
 
 @media(max-width:768px){
 
-    body{
-        overflow-x:hidden;
-    }
-
     header{
         flex-direction:column;
-
-        height:auto;
-
-        padding:20px;
+        justify-content:center;
 
         gap:15px;
+
+        padding:20px;
     }
 
     .logo{
-        width:100%;
-
         text-align:center;
-
         font-size:18px;
     }
 
     nav{
-        width:100%;
-
-        flex-wrap:wrap;
-
-        gap:15px;
+        gap:18px;
     }
 
     nav a{
-        font-size:13px;
+        font-size:14px;
     }
 
     .nav-logo{
@@ -317,20 +284,11 @@ footer{
 
     .contact-top h2{
         font-size:28px;
-
-        line-height:1.5;
-    }
-
-    .contact-line{
-        width:130px;
     }
 
     .top-desc{
         font-size:15px;
-
-        line-height:1.9;
-
-        text-align:justify;
+        line-height:1.8;
     }
 
     .whatsapp-box{
@@ -339,20 +297,20 @@ footer{
 
     .whatsapp-box h3{
         font-size:22px;
+        line-height:1.5;
     }
 
     .whatsapp-box p{
         font-size:15px;
-
         line-height:1.8;
     }
 
     .whatsapp-btn{
         width:100%;
-
         text-align:center;
 
         font-size:15px;
+        padding:15px;
     }
 
     .faq-section{
@@ -363,20 +321,17 @@ footer{
         font-size:30px;
     }
 
-    .faq-container{
-        gap:20px;
-    }
-
     .faq-box{
-        width:100%;
+        padding:24px;
     }
 
     .faq-box h3{
-        font-size:19px;
+        font-size:20px;
     }
 
     .faq-box p{
         font-size:15px;
+        line-height:1.8;
     }
 
     footer{
